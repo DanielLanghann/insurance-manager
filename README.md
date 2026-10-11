@@ -39,7 +39,7 @@ flowchart LR
 
 ## Roadmap
 
-- [ ] v0.1.0 – Foundation (repository, CI, ADRs)
+- [x] v0.1.0 – Foundation (repository, CI, ADRs)
 - [ ] v0.2.0 – Backend core, authentication, CRUD API, OpenAPI
 - [ ] v0.3.0 – Event pipeline (outbox, Kafka, insurance history)
 - [ ] v0.4.0 – Frontend

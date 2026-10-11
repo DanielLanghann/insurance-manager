@@ -294,13 +294,13 @@ Jeder Meilenstein endet mit: grüner CI, aktualisiertem README-Abschnitt, mindes
 
 | Step | Files / areas | Change | Rationale | Dependencies | Status |
 | --- | --- | --- | --- | --- | --- |
-| 0.1 | Repo-Root | `git init -b main`, Repo-lokale Noreply-Commit-E-Mail, `.gitignore`, `.editorconfig`, `main.py`, Root-`pyproject.toml` und Root-`.venv` entfernen, `LICENSE` (MIT), README-Skelett | Saubere, öffentliche Basis | – | Planned |
-| 0.2 | `backend/pyproject.toml`, `backend/.python-version`, `backend/uv.lock` | Minimales uv-Projekt (`package = false`), Ruff-Konfiguration, Dev-Gruppe mit `ruff` | Ruff-Config + Lockfile ab dem ersten Commit | 0.1 | Planned |
-| 0.3 | `.pre-commit-config.yaml` | pre-commit-hooks (inkl. detect-private-key), ruff, ruff-format; Prettier erst in M3 mit dem Frontend (das Mirror-Repo ist archiviert) | Qualität vor jedem Commit | 0.2 | Planned |
-| 0.4 | `docs/adr/0000-template.md`, `0001-monorepo.md` | ADR-Format (Context / Decision / Consequences) | Entscheidungen dokumentieren | 0.1 | Planned |
-| 0.5 | `.github/workflows/ci.yml`, `dependabot.yml`, PR-Template | CI-Job `pre-commit`; `backend.yml` kommt in M1, `frontend.yml` in M3 (ohne Code würden sie nur leer laufen oder fehlschlagen) | CI von Anfang an | 0.3 | Planned |
-| 0.6 | `Makefile`, `.env.example` | Target `lint` aktiv, `dev`, `test`, `schema`, `k8s-up`, `k8s-down` als Platzhalter | Einheitlicher Einstieg | 0.1 | Planned |
-| 0.7 | GitHub | `gh repo create DanielLanghann/insurance-manager --public`, Push, CI grün, Tag `v0.1.0` | Veröffentlichung | 0.1–0.6 | Planned |
+| 0.1 | Repo-Root | `git init -b main`, Repo-lokale Noreply-Commit-E-Mail, `.gitignore`, `.editorconfig`, `main.py`, Root-`pyproject.toml` und Root-`.venv` entfernen, `LICENSE` (MIT), README-Skelett | Saubere, öffentliche Basis | – | Done |
+| 0.2 | `backend/pyproject.toml`, `backend/.python-version`, `backend/uv.lock` | Minimales uv-Projekt (`package = false`), Ruff-Konfiguration, Dev-Gruppe mit `ruff` | Ruff-Config + Lockfile ab dem ersten Commit | 0.1 | Done |
+| 0.3 | `.pre-commit-config.yaml` | pre-commit-hooks (inkl. detect-private-key), ruff, ruff-format; Prettier erst in M3 mit dem Frontend (das Mirror-Repo ist archiviert) | Qualität vor jedem Commit | 0.2 | Done |
+| 0.4 | `docs/adr/0000-template.md`, `0001-monorepo.md` | ADR-Format (Context / Decision / Consequences) | Entscheidungen dokumentieren | 0.1 | Done |
+| 0.5 | `.github/workflows/ci.yml`, `dependabot.yml`, PR-Template | CI-Job `pre-commit`; `backend.yml` kommt in M1, `frontend.yml` in M3 (ohne Code würden sie nur leer laufen oder fehlschlagen) | CI von Anfang an | 0.3 | Done |
+| 0.6 | `Makefile`, `.env.example` | Target `lint` aktiv, `dev`, `test`, `schema`, `k8s-up`, `k8s-down` als Platzhalter | Einheitlicher Einstieg | 0.1 | Done |
+| 0.7 | GitHub | `gh repo create DanielLanghann/insurance-manager --public`, Push, CI grün, Tag `v0.1.0` | Veröffentlichung | 0.1–0.6 | Done |
 
 ### M1 – Backend Core + Auth + API (`v0.2.0`)
 
@@ -478,7 +478,7 @@ Jeder Meilenstein endet mit: grüner CI, aktualisiertem README-Abschnitt, mindes
 
 ## Implementation Checklist
 
-- [ ] M0 Foundation: Repo, Pre-Commit, CI-Skelett, ADR-Template, Makefile → `v0.1.0`
+- [x] M0 Foundation: Repo, Pre-Commit, CI-Skelett, ADR-Template, Makefile → `v0.1.0`
 - [ ] M1 Backend: User, Session-Auth, Security, Benutzerverwaltung, Domain-CRUD, OpenAPI, Seed, Tests → `v0.2.0`
 - [ ] M2 Events: Schema, Outbox, Relay, Consumer, DLQ, History, Compose, Integrationstests → `v0.3.0`
 - [ ] M3 Frontend: Login, Layout, Liste, Users, Image, Playwright → `v0.4.0`
