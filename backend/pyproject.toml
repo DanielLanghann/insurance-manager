@@ -1,0 +1,25 @@
+[project]
+name = "insurance-manager-backend"
+version = "0.1.0"
+description = "Backend of the Insurance Manager portal (Django REST Framework + Kafka)."
+requires-python = ">=3.14"
+dependencies = []
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+extend-exclude = ["**/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "DJ", "S", "SIM", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.0",
+]
